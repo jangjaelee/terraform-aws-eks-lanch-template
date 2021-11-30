@@ -78,6 +78,11 @@ variable "kms_arn_ebs" {
   type        = string
 }
 
+variable "az" {
+  description = "The Availability Zone for the instance."
+  type        = string
+}
+
 variable "env" {
   description = "Environment"
   type        = string
