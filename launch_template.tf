@@ -3,7 +3,7 @@ resource "aws_launch_template" "this" {
   description     = var.lt_description
   #default_version = var.lt_version
   
-  image_id = var.ami_id
+  image_id      = var.ami_id
   instance_type = var.instance_type
   key_name      = var.key_name
   
@@ -27,6 +27,10 @@ resource "aws_launch_template" "this" {
     http_endpoint               = "enabled"
     http_tokens                 = "optional"
     http_put_response_hop_limit = 1
+  }
+
+  placement {
+    availability_zone = var.az
   }
   
   user_data = base64encode(local.userdata)
