@@ -13,7 +13,7 @@ These types of resources are supported:
 main.tf
 ```hcl
 module "launch_template" {
-  source = "git@github.com:jangjaelee/terraform-aws-eks-launch-template.git"
+  source = "git@github.com:jangjaelee/terraform-aws-eks-lanch-template.git"
 
   lt_name        = "${local.cluster_name}-CentOS-7_AMI"
   lt_description = "CenOS 7 AMI launch template"
